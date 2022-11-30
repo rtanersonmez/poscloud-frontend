@@ -39,6 +39,17 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## For TailwindCss
+
+**Note: the file you need to include is output.css!**
+
+To start tailwind css compilation you need to start the script in terminal
+### `npx tailwindcss -i ./src/index.css -o ./src/output.css --watch`
+
+It listens for the content tag in the tailwind.config.js file. Calls the css classes you write to the output.css file
+
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
