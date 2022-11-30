@@ -1,58 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, {useEffect} from 'react';
+import './output.css';
+import logo from './assets/img/restaurant-logo-white.png'
+
+let restaurantLogo = 'npx tailwindcss -i ./src/index.css -o ./src/output.css --watch'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        document.body.classList.add('body');
+        document.documentElement.classList.add('html')
+    })
+    return (
+        <>
+
+            <section className="text-custom-orange font-login text-pos-18rem font-normal leading-1-4 fixed right-[10px] top-[10px]">v1.8.516</section>
+
+            <main className="font-normal left-[50%] absolute w-[504px] translate-y-[-50%] top-[35%] ml-[-252px]">
+
+                <img src="assets/img/restaurant-logo-white.png" alt=""
+                     className="w-full mt-0 mb-13 ml-auto mr-auto block pt-0 pb-0 pr-56 pl-56"/>
+
+                <form action="#" method="post" className="relative mt-0 mb-0 mr-auto ml-auto w-full">
+
+                    <input name="_token" type="hidden" value="2407HMMhfszl4jgFdU5uf28DqP64BBYs7oFbeWr2"/>
+
+                    <div className="float-left w-[354px]">
+                        <input type="text" name="username" placeholder="E-mail" className="rounded-tl-[10px] login-form-inputs border-b"/>
+                        <input type="password" name="mail" placeholder="Password / Şifre" className="rounded-bl-[10px] login-form-inputs"/>
+                    </div>
+
+                    <button type="submit" className="bg-pos-green border-none p-[41px] rounded-tr-[10px] rounded-br-[10px] float-left">
+                        <img src="assets/img/check.svg" alt="" className="w-[68px] h-[68px] fill-black"/>
+                    </button>
+
+                </form>
+            </main>
+        </>
+
+    );
 }
 
 export default App;
