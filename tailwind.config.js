@@ -32,6 +32,9 @@ module.exports = {
                 'pos-16-4': ['1.6rem', '1.4'],
                 'pos-18rem': '1.8rem'
             },
+            screens: {
+                'login-sm': '600px'
+            }
         },
     },
     plugins: [],
